@@ -1,0 +1,6 @@
+databaseChangeLog:
+  - logicalFilePath: '20220813-initial-db.yaml'
+  - includeAll:
+      path: "changesets"
+      relativeToChangelogFile: true
+      errorIfMissingOrEmpty: true

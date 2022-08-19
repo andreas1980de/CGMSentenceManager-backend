@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2022081301-amajchrzak
+      author: amajchrzak
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullabale: false
+                    primaryKey: true
+                    primnaryKeyName: CONSTRAINT_ID
+                  name: ID
+                  type: BIGINT
+              - column:
+                  name: N
+                  type: VARCHAR(255)
+              - column:
+                  name: S
+                  type: VARCHAR(255)
+              - column:
+                  name: V
+                  type: VARCHAR(255)
+              - column:
+                  name: O
+                  type: VARCHAR(255)
+            tableName: SENTENCE

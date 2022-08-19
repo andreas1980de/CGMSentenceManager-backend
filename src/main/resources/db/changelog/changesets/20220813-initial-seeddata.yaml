@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2022081302-amajchrzak
+      author: amajchrzak
+      runOnChange: true
+      changes:
+        - loadData:
+            tableName: SENTENCE
+            file: db/changelog/seedData/data.csv
+            quotchar: '"'
+            separator: ','
