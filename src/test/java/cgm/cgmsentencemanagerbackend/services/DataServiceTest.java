@@ -12,10 +12,9 @@ import org.springframework.http.HttpStatus;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.ArgumentMatchers.anyLong;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -46,9 +45,7 @@ public class DataServiceTest {
         Sentence sentence = new Sentence();
 
         //when
-        when(dataRepository.findById(anyLong())).thenReturn(Optional.of(sentence));
-        when(dataRepository.save(sentence)).thenReturn(sentence);
-//        doNothing().when(dataRepository).save(sentence);
+        when(dataRepository.save(any())).thenReturn(sentence);
         var rueckgabe= dataService.changeSentence(sentenceDto);
 
         //then
